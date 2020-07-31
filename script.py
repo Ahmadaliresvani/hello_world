@@ -1,3 +1,13 @@
-import time
-for i in range(10):
-  print(f"hello reza {i}")
+import os
+
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+        
+
+# Example
+createFolder('./data/')
+# Creates a folder in the current directory called data
